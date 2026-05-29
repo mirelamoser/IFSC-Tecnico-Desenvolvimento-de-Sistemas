@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifsc.fln.controller.ProcessoOrdemServicoController">
+    <children>
+        <SplitPane dividerPositions="0.35" layoutX="14.0" layoutY="14.0" prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <items>
+
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                    <children>
+                        <TableView fx:id="tableViewOS" layoutX="14.0" layoutY="14.0" prefHeight="598.0" prefWidth="316.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <columns>
+                                <TableColumn fx:id="tableColumnOSNumero" prefWidth="60.0" text="Número" />
+                                <TableColumn fx:id="tableColumnOSData" prefWidth="90.0" text="Agenda" />
+                                <TableColumn fx:id="tableColumnOSVeiculo" prefWidth="120.0" text="Veículo" />
+                            </columns>
+                        </TableView>
+                    </children>
+                </AnchorPane>
+
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                    <children>
+
+                        <Label layoutX="140.0" layoutY="20.0" text="Detalhes da Ordem de Serviço">
+                            <font>
+                                <Font name="System Bold" size="16.0" />
+                            </font>
+                        </Label>
+
+                        <GridPane layoutX="70.0" layoutY="60.0" prefHeight="200.0" prefWidth="350.0">
+                            <columnConstraints>
+                                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="170.0" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="240.0" minWidth="10.0" prefWidth="230.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <Label text="Número: ">
+                                    <font>
+                                        <Font name="System Bold" size="13.0" />
+                                    </font>
+                                </Label>
+                                <Label text="Cliente: " GridPane.rowIndex="1">
+                                    <font>
+                                        <Font name="System Bold" size="13.0" />
+                                    </font>
+                                </Label>
+                                <Label text="Veículo: " GridPane.rowIndex="2">
+                                    <font>
+                                        <Font name="System Bold" size="13.0" />
+                                    </font>
+                                </Label>
+                                <Label text="Agenda: " GridPane.rowIndex="3">
+                                    <font>
+                                        <Font name="System Bold" size="13.0" />
+                                    </font>
+                                </Label>
+                                <Label text="Desconto: " GridPane.rowIndex="4">
+                                    <font>
+                                        <Font name="System Bold" size="13.0" />
+                                    </font>
+                                </Label>
+                                <Label text="Total: " GridPane.rowIndex="5">
+                                    <font>
+                                        <Font name="System Bold" size="13.0" />
+                                    </font>
+                                </Label>
+                                <Label text="Status: " GridPane.rowIndex="6">
+                                    <font>
+                                        <Font name="System Bold" size="13.0" />
+                                    </font>
+                                </Label>
+
+                                <Label fx:id="lblOSNumero" GridPane.columnIndex="1">
+                                    <GridPane.margin>
+                                        <Insets left="10.0" />
+                                    </GridPane.margin>
+                                </Label>
+                                <Label fx:id="lblOSCliente" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                    <GridPane.margin>
+                                        <Insets left="10.0" />
+                                    </GridPane.margin>
+                                </Label>
+                                <Label fx:id="lblOSVeiculo" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                    <GridPane.margin>
+                                        <Insets left="10.0" />
+                                    </GridPane.margin>
+                                </Label>
+                                <Label fx:id="lblOSAgenda" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                    <GridPane.margin>
+                                        <Insets left="10.0" />
+                                    </GridPane.margin>
+                                </Label>
+                                <Label fx:id="lblOSDesconto" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                    <GridPane.margin>
+                                        <Insets left="10.0" />
+                                    </GridPane.margin>
+                                </Label>
+                                <Label fx:id="lblOSTotal" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                    <GridPane.margin>
+                                        <Insets left="10.0" />
+                                    </GridPane.margin>
+                                </Label>
+                                <Label fx:id="lblOSStatus" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                    <GridPane.margin>
+                                        <Insets left="10.0" />
+                                    </GridPane.margin>
+                                </Label>
+                            </children>
+                        </GridPane>
+
+                        <Label layoutX="14.0" layoutY="285.0" text="Itens da Ordem de Serviço">
+                            <font>
+                                <Font name="System Bold" size="13.0" />
+                            </font>
+                        </Label>
+                        <TableView fx:id="tableViewItens" layoutX="14.0" layoutY="310.0" prefHeight="220.0" prefWidth="485.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="310.0">
+                            <columns>
+                                <TableColumn fx:id="tableColumnItemServico" prefWidth="200.0" text="Serviço" />
+                                <TableColumn fx:id="tableColumnItemValor" prefWidth="90.0" text="Valor" />
+                                <TableColumn fx:id="tableColumnItemObservacoes" prefWidth="190.0" text="Observações" />
+                            </columns>
+                        </TableView>
+
+                        <HBox alignment="CENTER_RIGHT" layoutX="175.0" layoutY="550.0" spacing="15.0" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="15.0">
+                            <children>
+                                <Button fx:id="btnInserir" mnemonicParsing="false" onAction="#handleBtnInserir" prefWidth="80.0" text="Inserir" />
+                                <Button fx:id="btnAlterar" mnemonicParsing="false" onAction="#handleBtnAlterar" prefWidth="80.0" text="Alterar" />
+                                <Button fx:id="btnExcluir" mnemonicParsing="false" onAction="#handleBtnExcluir" prefWidth="80.0" text="Excluir" />
+                            </children>
+                        </HBox>
+
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>
