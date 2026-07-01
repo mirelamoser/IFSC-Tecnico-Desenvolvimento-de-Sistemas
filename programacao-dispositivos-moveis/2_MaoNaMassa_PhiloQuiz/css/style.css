@@ -1,0 +1,225 @@
+/* ==========================================================================
+   PhiloQuest - Sistema de Design Mobile-First (Estilo Duolingo/Moderno)
+   ========================================================================== */
+
+:root {
+    --purple-main: #9e39f7;       /* Roxo vivo do seu novo padrão */
+    --purple-hover: #8e24e0;      /* Roxo hover do seu novo padrão */
+    --purple-light: #f3e8ff;      /* Fundo sutil para hover e badges (Mantido) */
+    --bg-light: #f9f7ff;          /* Fundo geral da aplicação */
+    --text-dark: #1e1b4b;         /* Azul escuro para alto contraste e legibilidade */
+    --text-muted: #6b7280;        /* Cinza para descrições secundárias */
+    
+    --success-main: #22c55e;      /* Verde Duolingo para acertos */
+    --success-light: #f0fdf4;
+    --danger-main: #ef4444;       /* Vermelho vibrante para erros */
+    --danger-light: #fef2f2;
+}
+
+/* Reset e Suavização de Interface */
+body {
+    background-color: var(--bg-light) !important;
+    color: var(--text-dark);
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Container de Proteção com Trava de Simulação de Smartphone */
+.app-container {
+    width: 100%;
+    max-width: 430px; /* Alinhamento estrito para simulação mobile em desktops */
+    margin: 0 auto;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+/* Cores Utilitárias */
+.bg-purple { background-color: var(--purple-main) !important; }
+.bg-purple-light { background-color: var(--purple-light) !important; }
+.text-purple { color: var(--purple-main) !important; }
+.border-purple { border-color: var(--purple-main) !important; }
+
+/* Botões Superiores Ajustados para Alvo de Toque (44px mínimos) */
+.btn-nav-action {
+    width: 44px;
+    height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px !important;
+    padding: 0 !important;
+}
+
+/* Transições Fluídas e Amortecidas de Telas SPA */
+.tela-spa {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1), transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.tela-spa.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Identidade Visual - Logo Redondo da Home */
+.brand-icon-wrapper {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--purple-main), var(--purple-hover));
+    border-radius: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Atualizado para o RGB do novo roxo: 158, 57, 247 */
+    box-shadow: 0 8px 20px rgba(158, 57, 247, 0.25);
+}
+
+/* Cards Premium Modificados (Visual Limpo com Profundidade) */
+.card {
+    background-color: #ffffff !important;
+    border-radius: 24px !important; /* Visual orgânico e moderno */
+    /* Atualizado para o RGB do novo roxo */
+    border: 2px solid rgba(158, 57, 247, 0.08) !important;
+    box-shadow: 0 6px 18px rgba(158, 57, 247, 0.03) !important;
+}
+
+/* Enfeites Laterais Semânticos para Níveis de Dificuldade */
+.border-left-success { border-left: 6px solid var(--success-main) !important; }
+.border-left-warning { border-left: 6px solid #f59e0b !important; }
+.border-left-danger { border-left: 6px solid var(--danger-main) !important; }
+
+.difficulty-badge-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.card-hover {
+    cursor: pointer;
+    transition: transform 0.15s ease;
+}
+
+.card-hover:active {
+    transform: scale(0.97) !important;
+}
+
+/* Botões Grandes Estilo Jogo (Efeito Físico de Toque Retido) */
+.btn-action-lg {
+    padding: 14px 24px !important;
+    font-weight: 700 !important;
+    font-size: 1.05rem !important;
+    border-radius: 16px !important;
+    border: none !important;
+    transition: transform 0.1s ease;
+}
+
+.btn-purple {
+    background-color: var(--purple-main) !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 0 var(--purple-hover) !important;
+}
+
+.btn-purple:active {
+    transform: translateY(4px) !important;
+    box-shadow: none !important;
+}
+
+.btn-outline-muted {
+    background-color: #ffffff !important;
+    border: 2px solid #e2e8f0 !important;
+    color: var(--text-dark) !important;
+    box-shadow: 0 4px 0 #e2e8f0 !important;
+}
+
+.btn-outline-muted:active {
+    transform: translateY(4px) !important;
+    box-shadow: none !important;
+}
+
+/* Alternativas Baseadas em Botões Fluidos Ajustados */
+.btn-quiz-option {
+    border: 2px solid #e2e8f0 !important;
+    color: var(--text-dark) !important;
+    background-color: #ffffff !important;
+    border-radius: 16px !important;
+    font-weight: 600;
+    padding: 16px 20px !important;
+    font-size: 0.95rem;
+    text-align: left;
+    width: 100%;
+    box-shadow: 0 4px 0 #e2e8f0 !important;
+    transition: all 0.1s ease;
+}
+
+.btn-quiz-option:hover:not(:disabled) {
+    background-color: var(--purple-light) !important;
+    border-color: var(--purple-main) !important;
+}
+
+/* Estados Dinâmicos de Resposta (Injetados via script) */
+.option-correct {
+    background-color: var(--success-light) !important;
+    border-color: var(--success-main) !important;
+    color: var(--success-main) !important;
+    box-shadow: 0 4px 0 #16a34a !important;
+}
+
+.option-wrong {
+    background-color: var(--danger-light) !important;
+    border-color: var(--danger-main) !important;
+    color: var(--danger-main) !important;
+    box-shadow: 0 4px 0 #dc2626 !important;
+}
+
+/* Componentes de Progresso e Placar Limpo */
+.progress-premium {
+    background-color: #e2e8f0 !important;
+    border-radius: 8px !important;
+    overflow: hidden;
+    height: 10px !important;
+}
+
+.table-ranking-clean {
+    border-collapse: separate !important;
+    border-spacing: 0 8px !important;
+}
+
+.table-ranking-clean tbody tr {
+    background-color: #ffffff !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.01) !important;
+}
+
+.table-ranking-clean td {
+    padding: 14px 10px !important;
+    border: none !important;
+    font-size: 0.9rem;
+    vertical-align: middle;
+}
+
+.table-ranking-clean tbody tr td:first-child {
+    border-top-left-radius: 14px !important;
+    border-bottom-left-radius: 14px !important;
+}
+
+.table-ranking-clean tbody tr td:last-child {
+    border-top-right-radius: 14px !important;
+    border-bottom-right-radius: 14px !important;
+}
+
+/* Modais Arredondados Nativos */
+.modal-content {
+    border-radius: 28px !important;
+}
+
+.bg-warning-light { background-color: #fffbeb !important; }

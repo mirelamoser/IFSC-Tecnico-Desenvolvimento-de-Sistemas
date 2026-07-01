@@ -1,0 +1,5 @@
+[
+  { "nome": "Sócrates", "pontuacao": 150, "dificuldade": "Difícil", "data": "20/05/2026" },
+  { "nome": "Aristóteles", "pontuacao": 100, "dificuldade": "Médio", "data": "21/05/2026" },
+  { "nome": "Platão", "pontuacao": 50, "dificuldade": "Fácil", "data": "19/05/2026" }
+]

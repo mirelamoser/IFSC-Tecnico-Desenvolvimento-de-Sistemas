@@ -1,0 +1,21 @@
+backend jason
+
+fácil 
+médio
+dificil
+
+traz as perguntas e sorteia
+
+só faz get do backend
+
+1 - json separados por níveis de dificuldade de perguntas
+2 - html arquivo principal
+3 - lógica que permite trocar as telas (Home ➔ Dificuldade ➔ Quiz ➔ Resultado) route.js | app.js *MOTOR SPA*
+4 - funções para buscar as perguntas - api.js *API*
+5 - lógica gerenciar a pontuação, verificar se a resposta está correta, passar para a próxima pergunta e calcular o resultado final quiz.js | storage.js
+6 - aplicativo instalável e que funciona offline manifest.json | service-worker.js
+
+
+
+criar um outro json com o recorde/ranking
+criar a casinha ali em cima do canto direito superior para voltar ao início | em seguida aparece uma tela confirmado se é isso mesmo que o usuário quer
