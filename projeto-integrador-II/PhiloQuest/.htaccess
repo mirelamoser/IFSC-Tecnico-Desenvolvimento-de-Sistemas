@@ -1,0 +1,42 @@
+# Bloqueia utilitários de desenvolvimento expostos na web em produção.
+
+<FilesMatch "^(setup_database)\.php$">
+
+    Require all denied
+
+</FilesMatch>
+
+
+
+# Impede listagem de diretórios.
+
+Options -Indexes
+
+
+
+DirectoryIndex index.php login.php
+
+
+
+# Protege variáveis de ambiente.
+
+<FilesMatch "^\.env">
+
+    Require all denied
+
+</FilesMatch>
+
+
+
+# Bloqueia pastas internas e scripts CLI.
+
+<IfModule mod_rewrite.c>
+
+    RewriteEngine On
+
+    RewriteRule ^scripts/ - [F,L]
+
+    RewriteRule ^(vendor|database|src|storage)/ - [F,L]
+
+</IfModule>
+
