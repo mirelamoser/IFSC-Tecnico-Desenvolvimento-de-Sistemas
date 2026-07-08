@@ -1,0 +1,191 @@
+/* Formulários, tabelas e blocos internos — complemento mínimo ao Bootstrap */
+
+.form-panel {
+
+    border: 1px solid var(--philo-border-card, #b8a9ce);
+
+}
+
+.table-panel {
+
+    border: 1px solid var(--philo-border-card, #b8a9ce);
+
+}
+
+.upload-area {
+
+    border: 2px dashed #d0d0d0;
+
+    cursor: pointer;
+
+    border-radius: 0.5rem;
+
+    padding: 1.5rem;
+
+    text-align: center;
+
+}
+
+.upload-area:hover {
+
+    border-color: var(--bs-primary);
+
+    background: #faf8ff;
+
+}
+
+.badge-papel { background: #f1f5f9; color: #3b4454; }
+
+.bg-ativo { background: #d1fae5; color: #047857; }
+
+.bg-inativo { background: #fee2e2; color: #b91c1c; }
+
+.btn-bloquear { background: #fef08a; color: #333; border-color: #fde047; }
+
+.btn-desbloquear { background: #d1fae5; color: #047857; border-color: #6ee7b7; }
+
+.btn-acao {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    padding: 0.4rem 0.75rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.btn-reset {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    padding: 0.4rem 0.75rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    background: #f0ad4e;
+    color: #fff;
+}
+
+.btn-reset:hover { background: #ec971f; color: #fff; }
+
+.ver-detalhes-btn {
+
+    background: var(--bs-primary);
+
+    color: #fff;
+
+}
+
+.ver-detalhes-btn:hover { background: #8e24e0; color: #fff; }
+
+.btn-validar {
+
+    background: var(--bs-primary);
+
+    color: #fff;
+
+}
+
+.btn-validar:hover { background: #7a28d0; color: #fff; }
+
+.card-avaliacao {
+    box-shadow: none !important;
+}
+
+.aluno-avaliacoes .card {
+    box-shadow: none !important;
+}
+
+.aluno-mural .mural-post {
+    box-shadow: none !important;
+    border: 1px solid var(--philo-border-card, #e8e0f4);
+}
+
+.mural-avatar {
+    width: 44px;
+    height: 44px;
+    font-size: 1rem;
+}
+
+.mural-badge {
+    font-size: 0.72rem;
+    font-weight: 600;
+}
+
+.area-aluno .card,
+.area-aluno .btn {
+    box-shadow: none !important;
+}
+
+.area-aluno .card-avaliacao {
+    border-left: none !important;
+}
+
+.card-pergunta.bloqueada { border-left: 5px solid #10b981 !important; }
+
+.area-professor .card,
+.area-professor .btn {
+    box-shadow: none !important;
+}
+
+.area-professor .card-pergunta.bloqueada {
+    border-left: none !important;
+}
+
+.badge.disponivel { background: #fff3cd; color: #856404; }
+
+.badge.utilizada { background: #d1fae5; color: #047857; }
+
+
+
+.status-box {
+
+    text-align: center;
+
+    padding: 2.5rem 1.5rem;
+
+    border-radius: 1rem;
+
+    margin-bottom: 1.5rem;
+
+}
+
+.status-box.status-waiting {
+
+    background: #fff8e6;
+
+    border: 1px solid #ffe0a3;
+
+    color: #92400e;
+
+}
+
+.status-box.status-done {
+
+    background: #ecfdf5;
+
+    border: 1px solid #a7f3d0;
+
+    color: #065f46;
+
+}
+
+/* Histórico de etapas — título | badge central | seta */
+#historicoEtapas .accordion-button {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+#historicoEtapas .accordion-button::after {
+    margin-left: 0;
+    position: absolute;
+    right: 1.25rem;
+}
+#historicoEtapas .accordion-button .row {
+    margin-right: 1.5rem;
+}
+
